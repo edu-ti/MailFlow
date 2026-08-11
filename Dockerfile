@@ -1,8 +1,10 @@
 FROM roundcube/roundcubemail:latest
 
-# Substitui as logos na pasta fonte original do Roundcube (que será sincronizada no entrypoint)
-COPY ./assets/LOGO-FB.png /usr/src/roundcubemail/skins/elastic/images/logo.svg
-COPY ./assets/LOGO-FB.png /usr/src/roundcubemail/skins/elastic/images/logo_small.svg
+# Copia todas as variações de logos para a pasta de imagens do tema
+COPY ./assets/*.png /usr/src/roundcubemail/skins/elastic/images/
+
+# Copia o arquivo de configuração customizado para registrar as logos corretamente
+COPY ./assets/logo.php /var/roundcube/config/logo.php
 
 # Anexa o CSS customizado ao arquivo de estilos principal do tema Elastic
 COPY ./assets/custom.css /tmp/custom.css
