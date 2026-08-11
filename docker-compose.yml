@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mailflow:
+    build: .
+    container_name: mailflow_app
+    restart: always
+    environment:
+      - ROUNDCUBEMAIL_DEFAULT_HOST=ssl/tls://email-ssl.com.br
+      - ROUNDCUBEMAIL_DEFAULT_PORT=993
+      - ROUNDCUBEMAIL_SMTP_SERVER=ssl/tls://email-ssl.com.br
+      - ROUNDCUBEMAIL_SMTP_PORT=465
+      - ROUNDCUBEMAIL_SKIN=elastic
+      - ROUNDCUBEMAIL_PRODUCT_NAME=MailFlow
+      - ROUNDCUBEMAIL_DSN=sqlite:////var/www/db/sqllite.db?mode=0646
+    volumes:
+      - mailflow_db:/var/www/db
+      - mailflow_config:/var/www/html/config
+    expose:
+      - "80"
+
+volumes:
+  mailflow_db:
+  mailflow_config:

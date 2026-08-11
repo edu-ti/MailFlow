@@ -1,0 +1,39 @@
+/* Custom MailFlow Theme Styles (Elastic) */
+
+:root {
+    --color-main: #0066FF;
+    --color-main-dark: #0052cc;
+    --color-main-darker: #003d99;
+    --color-font: #333333;
+    
+    /* Outras variáveis padrão do tema Elastic que podem ser sobrescritas */
+    --standard-color: #0066FF;
+    --color-btn-primary-bg: #0066FF;
+    --color-btn-primary-hover-bg: #0052cc;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+a {
+    color: var(--color-main);
+}
+
+a:hover, a:focus {
+    color: var(--color-main-dark);
+}
+
+.btn-primary {
+    background-color: var(--color-main) !important;
+    border-color: var(--color-main-dark) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--color-main-dark) !important;
+    border-color: var(--color-main-darker) !important;
+}
+
+.header-title {
+    color: var(--color-main);
+}
