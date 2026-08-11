@@ -6,9 +6,9 @@ services:
     container_name: mailflow_app
     restart: always
     environment:
-      - ROUNDCUBEMAIL_DEFAULT_HOST=ssl/tls://email-ssl.com.br
+      - ROUNDCUBEMAIL_DEFAULT_HOST=ssl://email-ssl.com.br
       - ROUNDCUBEMAIL_DEFAULT_PORT=993
-      - ROUNDCUBEMAIL_SMTP_SERVER=ssl/tls://email-ssl.com.br
+      - ROUNDCUBEMAIL_SMTP_SERVER=ssl://email-ssl.com.br
       - ROUNDCUBEMAIL_SMTP_PORT=465
       - ROUNDCUBEMAIL_SKIN=elastic
       - ROUNDCUBEMAIL_PRODUCT_NAME=MailFlow
