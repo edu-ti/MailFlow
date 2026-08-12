@@ -39,14 +39,6 @@ a:hover, a:focus {
 }
 
 /* Sidebar / Barra de Menu Lateral */
-#layout-menu,
-.task-menu-button {
-    background-color: #2f3a3f !important;
-}
-
-/* Cor do botão selecionado e ao passar o mouse no menu lateral */
-#layout-menu .selected,
-#layout-menu a:hover,
-#layout-menu button:hover {
-    background-color: #cde6f5 !important;
+#layout-menu .popover-header {
+    background-color: #ffffff !important;
 }
