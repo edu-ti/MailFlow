@@ -6,6 +6,10 @@ COPY ./assets/*.png /usr/src/roundcubemail/skins/elastic/images/
 # Copia o arquivo de configuração customizado para registrar as logos corretamente
 COPY ./assets/logo.php /var/roundcube/config/logo.php
 
+# Copia o favicon customizado (se existir na pasta assets)
+COPY ./assets/favicon.ico /usr/src/roundcubemail/skins/elastic/images/favicon.ico
+COPY ./assets/favicon.ico /usr/src/roundcubemail/favicon.ico
+
 # Anexa o CSS customizado ao arquivo de estilos principal do tema Elastic
 COPY ./assets/custom.css /tmp/custom.css
 RUN cat /tmp/custom.css >> /usr/src/roundcubemail/skins/elastic/styles/styles.min.css && rm /tmp/custom.css

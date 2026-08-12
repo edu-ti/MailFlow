@@ -6,3 +6,6 @@ $config['skin_logo'] = [
     '[small]' => 'skins/elastic/images/logo-fb-vert.png',
     '[small][dark]' => 'skins/elastic/images/logo-fp-vert.png',
 ];
+
+// Tempo de expiração da sessão em minutos (ex: 120 = 2 horas)
+$config['session_lifetime'] = 120;
